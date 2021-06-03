@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://oh.lutris.engineering/
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.NEARLYFREESPEECH_KEY }}
+          known_hosts: ssh.phx.nearlyfreespeech.net,208.94.116.211 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEkD1YQOPCy0w/g/OqpBys337RAtyK/HDmW2i0BUW4mnN5em2jkB69nhJP91nU8s05OfB1MgxVVzyXc80Ounbzw=
+      - run: ssh zebmccorkle_eohp@ssh.phx.nearlyfreespeech.net /home/protected/build.sh
