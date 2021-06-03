@@ -1,0 +1,9 @@
+partNumber: LE-EX-1
+description: An example part
+bom:
+  - mouser: 556-ATMEGA328P-PU
+versions:
+  - timestamp: 2021-06-03T04:04:17+0000
+    filename: LE-EX-1.dxf
+    format: LibreCAD
+    cid: QmNtALGfTpE6fw6ejsvRDCGPdGVfrx5EJbb5cLEuDg6ngA

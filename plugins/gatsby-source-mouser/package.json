@@ -1,0 +1,20 @@
+{
+  "name": "gatsby-source-mouser",
+  "version": "1.0.0",
+  "description": "Fetch data from Mouser Electronics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build script setup\""
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "author": "Piper McCorkle <piper@lutris.engineering>",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.9",
+    "node-fetch": "^2.6.1"
+  }
+}
