@@ -11,3 +11,5 @@ jobs:
       uses: jzweifel/gatsby-cli-github-action@master
       with:
         gatsby-arg: build
+      env:
+        MOUSER_KEY: ${{ secrets.MOUSER_KEY }}
